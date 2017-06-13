@@ -27,6 +27,16 @@ server.get('/names', function(req, res) {
   })
 })
 
+/*
+ *
+ * Request:
+ * curl http://localhost:8080/names
+ *
+ * Response:
+ * {"names":["joanne","jim","john","jess"]}
+ *
+ */
+
 // Let your server listen on the port passed in (8080). You can add a callback
 // as a second argument that runs when your server starts
 server.listen(8080)
