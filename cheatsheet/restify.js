@@ -4,6 +4,22 @@ const restify = require('restify')
 // Create new server object
 let server = restify.createServer()
 
+// Middleware
+
+/*
+ * Query parser takes properties set in the URL and maps them to req.query
+ */
+
+server.use(restify.queryParser());
+
+/*
+ * Body parser takes a multitude of options
+ * It parses the body based on the Content-Type header
+ * Its makes the parsed body available via req.params
+ */
+
+server.use(restify.bodyParser());
+
 /*
  * Here is a definition for an endpoint at /names accessabile when using HTTP
  * GET. The first argument is the path you want the GET endpoint to be available
