@@ -1,0 +1,5 @@
+Fix permissions
+
+`sudo chown -R "$USER":admin /usr/local`
+`sudo chown -R "$USER":admin /Library/Caches/Homebrew`
+
