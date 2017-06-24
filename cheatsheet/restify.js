@@ -20,6 +20,9 @@ server.use(restify.queryParser());
 
 server.use(restify.bodyParser());
 
+// Parses and add's authenication username/password/token to the req object
+server.use(restify.authorizationParser());
+
 /*
  * Here is a definition for an endpoint at /names accessabile when using HTTP
  * GET. The first argument is the path you want the GET endpoint to be available
